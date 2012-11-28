@@ -1,9 +1,11 @@
 set nocompatible
 
 " setup Vundle
+filetype off
 set rtp+=~/.vim/vundle.git/
 call vundle#rc()
 
+Bundle 'gmarik/vundle'
 Bundle "rails.vim"
 Bundle "ack.vim"
 Bundle 'JSON.vim'
@@ -17,10 +19,10 @@ Bundle 'git://git.wincent.com/command-t.git'
 "Bundle 'CamelCaseComplete'
 "Bundle 'Conque'
 
+filetype plugin indent on
 set expandtab
 set tabstop=2
 set shiftwidth=2
-filetype plugin indent on 
 set encoding=utf-8
 set nowrap
 
