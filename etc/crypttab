@@ -1,0 +1,3 @@
+crypthome  /dev/disk/by-uuid/1f1cd23c-c230-4bda-a173-d27ba62ab37c none  luks
+swap  /dev/sda9 /dev/random swap,cipher=aes-cbc-essiv:sha256
+
