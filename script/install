@@ -1,7 +1,8 @@
 #!/bin/bash
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+MAINDIR=$DIR/..
 
-cd $DIR/bash
+cd $MAINDIR/bash
 ./install
 
