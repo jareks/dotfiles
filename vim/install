@@ -4,5 +4,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 ln -s $DIR/.vimrc ~
 
+git clone https://github.com/jpo/vim-railscasts-theme.git ~/vim/railscasts
+ln -s ~/vim/railscasts/colors/railscasts.vim ~/vim/colors/
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 vim -c :BundleInstall
