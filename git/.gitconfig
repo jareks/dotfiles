@@ -1,0 +1,15 @@
+[alias]
+  st=status
+  co=checkout
+  cp=cherry-pick
+  br=branch
+[color]
+  ui=auto
+
+[user]
+	name = Jarosław Skrzypek
+	email = skrzypek.jarek@gmail.com
+[core]
+	excludesfile = /home/hawk/.gitignore_global
+[push]
+	default = current
