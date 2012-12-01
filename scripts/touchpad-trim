@@ -1,0 +1,5 @@
+#!/bin/bash
+# Disables a bit of touchpad on left
+
+synclient AreaLeftEdge=2000
+

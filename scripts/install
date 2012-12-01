@@ -1,0 +1,10 @@
+#!/bin/bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+shopt -s extglob
+mkdir ~/scripts
+cp $DIR/!(install) ~/scripts
+
+echo 'PATH=$PATH:$HOME/scripts' >> ~/.bash_ext
+
