@@ -1,3 +1,5 @@
+sudo apt-get install cryptsetup # not only cryptsetup-bin !!
+
 sudo cryptsetup -c aes-cbc-benbi -s 128 luksFormat /dev/mapper/isw_bhjbdaebde_Volume0p7
 
 sudo cryptsetup luksOpen /dev/mapper/isw_bhjbdaebde_Volume0p7 cryptohome
@@ -8,5 +10,12 @@ sudo mkfs.ext4 /dev/mapper/cryptohome
 # <target name> <source device>   <key file>  <options>
 crypthome  /dev/disk/by-uuid/604b8701-afaa-4086-8f6b-8c9e824f96a7 none  luks
 
-/etc/fstab
-/dev/mapper/crypthome /home           ext4    defaults,barrier=0        0       2
+/etc/fstab:
+/dev/mapper/crypthome /home           ext4    defaults  0       2
+
+/etc/default/grub:
+GRUB_CMDLINE_LINUX_DEFAULT="" # remove quite and splash
+
+After changing default/grub run:
+sudo update-grub
+
