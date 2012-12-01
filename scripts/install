@@ -8,3 +8,5 @@ cp $DIR/!(install) ~/scripts
 
 echo 'PATH=$PATH:$HOME/scripts' >> ~/.bash_ext
 
+ln -s /usr/bin/ack-grep ~/scripts/ack
+
