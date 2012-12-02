@@ -3,6 +3,6 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 BASHFILE=~/.bashrc
 
-ln -s $DIR/.[a-z]* ~
+ln -s $DIR/.bash[a-z]* ~
 # TODO: check if source .bash_xxx already exists before adding it
-ls -a $DIR/.[a-z]* | xargs -n1 -I {} bash -c "echo source ~/\`basename {}\` >> $BASHFILE"
+ls -a $DIR/.bash[a-z]* | xargs -n1 -I {} bash -c "echo source ~/\`basename {}\` >> $BASHFILE"
