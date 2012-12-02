@@ -1,0 +1,5 @@
+#!/bin/bash
+# Installs modules needed for Lenovo Z580 with BCM4313 wireless card
+
+sudo apt-get install -y build-essential linux-headers-generic bcmwl-kernel-source
+
