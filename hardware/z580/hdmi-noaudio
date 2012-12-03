@@ -1,0 +1,4 @@
+#!/bin/bash
+# On Lenovo Z580 with Intel hd4000, with UMA only (set in bios) I had to disable hdmi audio to get external monitor to work:
+xrandr --output HDMI1 --set "audio" off
+
