@@ -10,3 +10,10 @@ mkdir ~/.vim/colors
 ln -s ~/.vim/railscasts/colors/railscasts.vim ~/.vim/colors/
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 vim -c :BundleInstall
+
+# Install command-t
+cd ~/.vim/bundle/command-t/ruby/command-t
+ruby extconf.rb
+make
+cd -
+
