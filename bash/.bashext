@@ -40,3 +40,7 @@ bakwht='\e[47m'   # White
 txtrst='\e[0m'    # Text Reset
 
 PATH=$PATH:$HOME/scripts
+
+# Prompt
+PS1='\[\e[1;36m\]\w\$\[\e[0m\] '
+
