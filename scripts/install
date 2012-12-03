@@ -6,7 +6,7 @@ shopt -s extglob
 mkdir ~/scripts
 cp $DIR/!(install) ~/scripts
 
-echo 'PATH=$PATH:$HOME/scripts' >> ~/.bash_ext
+echo 'PATH=$PATH:$HOME/scripts' >> ~/.bashext
 
 ln -s /usr/bin/ack-grep ~/scripts/ack
 
