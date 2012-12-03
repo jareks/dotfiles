@@ -1,4 +1,7 @@
 #!/bin/bash
+# Please configure CRYPTODATADEV in .bash_local:
+# export CRYPTODATADEV=/dev/sdaX
+
 HISTFILE=
 export HISTFILE
 sudo cryptsetup luksOpen $CRYPTODATADEV cryptodata
