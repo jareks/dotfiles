@@ -6,14 +6,15 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle "rails.vim"
 Bundle "ack.vim"
 Bundle 'JSON.vim'
 Bundle 'LustyJuggler'
 Bundle 'The-NERD-tree'
 Bundle 'ruby.vim'
 Bundle 'snipMate'
+Bundle 'git://github.com/tpope/vim-rails.git'
 Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'git://github.com/bkad/CamelCaseMotion.git'
 "Bundle 'git://github.com/astashov/vim-ruby-debugger.git'
 "Bundle 'CamelCaseMotion'
 "Bundle 'CamelCaseComplete'
