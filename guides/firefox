@@ -1,0 +1,4 @@
+1. Move firefox cache to /tmp
+
+open about:config
+set browser.cache.disk.parent_directory to /tmp/ff-user
