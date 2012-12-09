@@ -3,7 +3,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 MAINDIR=$DIR/..
 
-for sys in vim git rvm
+for sys in vim git rvm java
 do
   $MAINDIR/$sys/bootstrap
 done

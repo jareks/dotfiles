@@ -3,7 +3,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 MAINDIR=$DIR/..
 
-for sys in bash vim git scripts
+for sys in bash vim git scripts ruby
 do
   cd $MAINDIR/$sys
   ./install
