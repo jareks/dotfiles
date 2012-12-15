@@ -1,0 +1,9 @@
+Boxes shortlist: http://www.vagrantbox.es/
+Ubuntu Server 12.04 amd64 (with Puppet, Chef and VirtualBox 4.2.1):
+vagrant box add ubuntu1204 https://dl.dropbox.com/u/1543052/Boxes/UbuntuServer12.04amd64.box
+
+Quick start:
+
+$ vagrant box add lucid32 http://files.vagrantup.com/lucid32.box
+$ vagrant init lucid32
+$ vagrant up
