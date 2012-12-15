@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # For capybara
-sudo apt-get install -y libqt4-dev libqtwebkit-dev nodejs
+sudo apt-get install -y libqt4-dev libqtwebkit-dev nodejs libsqlite3-dev
 
 gem install bundler
 
