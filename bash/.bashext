@@ -1,9 +1,11 @@
 # aliases
 alias rs="ruby script/rails server"
 alias sc="ruby script/rails console"
+alias db="ruby script/rails db -p"
 alias jt="python -mjson.tool"
 alias spec="time bundle exec rake spec"
 alias be="bundle exec"
+alias gts="git status"
 
 # Colors
 txtblk='\e[0;30m' # Black - Regular
