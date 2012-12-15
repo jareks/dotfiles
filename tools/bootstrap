@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sudo apt-get install -y htop sysstat nmap powertop ecryptfs-utils tree iotop
+sudo apt-get install -y htop sysstat nmap powertop ecryptfs-utils tree iotop smartmontools
 
