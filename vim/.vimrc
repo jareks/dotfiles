@@ -70,11 +70,16 @@ command C !ctags -R
 
 "remove spaces at end of lines
 autocmd FileType c,cpp,java,php,javascript,haskell,ruby autocmd BufWritePre <buffer> :%s/\s\+$//e
-
 autocmd BufReadPost *
       \ if line("'\"") > 0 && line("'\"") <= line("$") |
       \    exe "normal g`\"" |
       \  endif
+
+" syntax higlight for .jst.ejs
+au BufNewFile,BufRead *.ejs set filetype=html
+
+" Replace word under coursor
+map <leader>s "ayiw:%s/<C-R>a/
 
 " Jump to the next or previous line that has the same level or a lower
 " level of indentation than the current line.
