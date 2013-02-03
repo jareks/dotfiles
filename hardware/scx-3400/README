@@ -1,0 +1,10 @@
+/etc/sane.d/xerox_mfp.conf
+
+# Samsung SCX-3400
+usb 0x04e8 0x344f
+
+/lib/udev/rules.d/40-libsane.rules
+
+# Samsung SCX-3400
+ATTRS{idVendor}=="04e8", ATTRS{idProduct}=="344f", ENV{libsane_matched}="yes"
+
