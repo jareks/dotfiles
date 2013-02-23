@@ -2,6 +2,8 @@
 alias rs="ruby script/rails server"
 alias sc="ruby script/rails console"
 alias db="ruby script/rails db -p"
+alias dbmg="bundle exec rake db:migrate"
+alias dbmgtp="bundle exec rake db:migrate test:prepare"
 alias jt="python -mjson.tool"
 alias spec="time bundle exec rake spec"
 alias be="bundle exec"
