@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# if you have a bloody issue with incoming call notifications not showing up consider:
+# sudo apt-get install libopenal1:i386 libatk1.0-0:i386  libxfixes3:i386  libxcomposite1:i386 libldap-2.4-2:i386 libroken18-heimdal:i386  libidn11:i386  libnss3:i386 libdrm-nouveau2:i386 libcaca0:i386      libxxf86vm1:i386 libgl1-mesa-dri:i386  libxcb-glx0:i386 libasn1-8-heimdal:i386 libgl1-mesa-glx:i386  libcairo2:i386 libx11-xcb1:i386 libtxc-dxtn-s2tc0:i386 libglapi-mesa:i386 libgssapi3-heimdal:i386     libgdk-pixbuf2.0-0:i386 libwind0-heimdal:i386 libpixman-1-0:i386 libsdl1.2debian:i386 libxinerama1:i386  libxft2:i386  libtheora0:i386  libdrm-intel1:i386 libvorbisfile3:i386  libhcrypto4-heimdal:i386 libnspr4:i386 libhx509-5-heimdal:i386 libheimbase1-heimdal:i386  libjasper1:i386   libpciaccess0:i386   libsasl2-2:i386    libpango1.0-0:i386 libheimntlm0-heimdal:i386 libcurl3-gnutls:i386 libxdamage1:i386 libxcb-render0:i386  librtmp0:i386 libxcursor1:i386 libxcb-shm0:i386 libsasl2-modules:i386  libxrandr2:i386 libgtk2.0-0:i386 libkrb5-26-heimdal:i386  libllvm3.1:i386 
+
 sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
 sudo add-apt-repository ppa:skype-wrapper/ppa && sudo apt-get update
 sudo apt-get -y install skype skype-wrapper
