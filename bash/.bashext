@@ -1,8 +1,10 @@
 # aliases
-alias rs="ruby script/rails server"
-alias sc="ruby script/rails console"
-alias db="ruby script/rails db -p"
+alias rs="rails server"
+alias rg="rails generate"
+alias sc="rails console"
+alias db="rails db -p"
 alias dbmg="bundle exec rake db:migrate"
+alias dbtp="bundle exec rake db:test:prepare"
 alias dbmgtp="bundle exec rake db:migrate test:prepare"
 alias jt="python -mjson.tool"
 alias spec="time bundle exec rake spec"
@@ -44,7 +46,7 @@ bakcyn='\e[46m'   # Cyan
 bakwht='\e[47m'   # White
 txtrst='\e[0m'    # Text Reset
 
-PATH=$PATH:$HOME/scripts
+PATH=$PATH:$HOME/scripts:$HOME/local/bin
 
 # Prompt
 PS1='\[\e[1;36m\]\w\$\[\e[0m\] '
