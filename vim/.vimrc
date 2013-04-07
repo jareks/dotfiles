@@ -41,6 +41,8 @@ nmap <C-a> :Ack -w <C-R><C-W><space><CR>
 map <silent> <C-Tab> <ESC>:LustyJugglePrevious<CR>
 map <silent> <F3> <ESC>:LustyJuggler<CR>
 map <silent> <leader>q <ESC>:NERDTreeFind<CR>
+map <leader>p <ESC>:let g:spin_test_file = expand("%")<CR><leader>[<CR>
+map <leader>[ <ESC>:execute "!spin push " . g:spin_test_file<CR>
 
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_ 
@@ -80,6 +82,14 @@ au BufNewFile,BufRead *.ejs set filetype=html
 
 " Replace word under coursor
 map <leader>s "ayiw:%s/<C-R>a/
+
+" Copy to system clipboard
+map <leader>c "+y
+" Paste from system clipboard
+map <leader>v "+p
+
+" Open command mode by hitting semicolon:
+nnoremap ; :
 
 " Jump to the next or previous line that has the same level or a lower
 " level of indentation than the current line.
