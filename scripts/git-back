@@ -1,0 +1,3 @@
+#!/bin/bash
+BRANCH=`git reflog | awk '/moving from / { print $6; exit}'`
+git co $BRANCH
