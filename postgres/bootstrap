@@ -1,4 +1,6 @@
 #!/bin/bash
 
 sudo apt-get install postgresql-contrib-9.1
-
+# 9.2 on 13.04 using postgres apt
+# sudo apt-get install postgresql-common -t raring
+# sudo apt-get install postgresql-9.2
