@@ -17,6 +17,7 @@ Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'git://github.com/bkad/CamelCaseMotion.git'
 Bundle 'git://github.com/kchmck/vim-coffee-script.git'
 Bundle 'git://github.com/uggedal/go-vim.git'
+Bundle 'derekwyatt/vim-scala'
 "Bundle 'git://github.com/astashov/vim-ruby-debugger.git'
 "Bundle 'CamelCaseMotion'
 "Bundle 'CamelCaseComplete'
@@ -31,6 +32,7 @@ set nowrap
 
 set undofile
 set hlsearch
+set maxmempattern=16384
 
 syntax on
 
@@ -43,7 +45,7 @@ map <silent> <C-Tab> <ESC>:LustyJugglePrevious<CR>
 map <silent> <F3> <ESC>:LustyJuggler<CR>
 map <silent> <leader>q <ESC>:NERDTreeFind<CR>
 map <leader>p <ESC>:let g:spin_test_file = expand("%")<CR><leader>[<CR>
-map <leader>[ <ESC>:execute "!spin push " . g:spin_test_file<CR>
+map <leader>[ <ESC>:execute "!spin push " . g:spin_test_file<CR><CR>
 
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_ 

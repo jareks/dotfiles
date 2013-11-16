@@ -5,11 +5,12 @@ alias sc="rails console"
 alias db="rails db -p"
 alias dbmg="bundle exec rake db:migrate"
 alias dbtp="bundle exec rake db:test:prepare"
-alias dbmgtp="bundle exec rake db:migrate test:prepare"
+alias dbmgtp="bundle exec rake db:migrate; bundle exec rake db:test:prepare"
 alias jt="python -mjson.tool"
 alias spec="time bundle exec rake spec"
 alias be="bundle exec"
 alias gts="git status"
+alias ccdiff="colordiff -u1"
 
 # Colors
 txtblk='\e[0;30m' # Black - Regular
