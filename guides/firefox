@@ -2,3 +2,8 @@
 
 open about:config
 set browser.cache.disk.parent_directory to /tmp/ff-user
+make sure: browser.cache.disk.enable;true
+
+consider:
+browser.cache.memory.enable = true
+network.http.pipelining = true
