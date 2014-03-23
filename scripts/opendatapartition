@@ -1,10 +1,10 @@
 #!/bin/bash
-# Please configure CRYPTODATADEV in .bash_local:
-# export CRYPTODATADEV=/dev/sdaX
+LUKSOPTIONS="--allow-discards"
+MOUNTOPTIONS="noatime,discard"
 
-HISTFILE=
-export HISTFILE
-sudo cryptsetup luksOpen $CRYPTODATADEV cryptodata
-sudo mount /dev/mapper/cryptodata /media/cryptodata
+sudo cryptsetup luksOpen $LUKSOPTIONS $CRYPTODATADEV cryptodata
+sudo mount -o $MOUNTOPTIONS /dev/mapper/cryptodata /media/cryptodata
 cd /media/cryptodata/
+HISTFILE=/media/cryptodata/.bash_history
+export HISTFILE
 bash
