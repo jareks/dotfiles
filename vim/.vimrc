@@ -11,13 +11,18 @@ Bundle 'JSON.vim'
 Bundle 'LustyJuggler'
 Bundle 'The-NERD-tree'
 Bundle 'ruby.vim'
-Bundle 'snipMate'
 Bundle 'git://github.com/tpope/vim-rails.git'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'git://github.com/bkad/CamelCaseMotion.git'
 Bundle 'git://github.com/kchmck/vim-coffee-script.git'
 Bundle 'git://github.com/uggedal/go-vim.git'
 Bundle 'derekwyatt/vim-scala'
+
+" Snipmate https://github.com/garbas/vim-snipmate
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
 "Bundle 'git://github.com/astashov/vim-ruby-debugger.git'
 "Bundle 'CamelCaseMotion'
 "Bundle 'CamelCaseComplete'
