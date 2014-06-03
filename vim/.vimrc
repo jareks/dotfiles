@@ -39,6 +39,7 @@ set undofile
 set hlsearch
 set maxmempattern=16384
 
+
 syntax on
 
 map <silent> <A-1> <ESC>:NERDTreeToggle<CR>
@@ -49,8 +50,25 @@ nmap <C-a> :Ack -w <C-R><C-W><space><CR>
 map <silent> <C-Tab> <ESC>:LustyJugglePrevious<CR>
 map <silent> <F3> <ESC>:LustyJuggler<CR>
 map <silent> <leader>q <ESC>:NERDTreeFind<CR>
-map <leader>p <ESC>:let g:spin_test_file = expand("%")<CR><leader>[<CR>
-map <leader>[ <ESC>:execute "!spin push " . g:spin_test_file<CR><CR>
+
+" calling spin
+map <leader>[ <ESC>:call CallSpin()<CR><CR>
+map <leader>p <ESC>:call SetSpinCall(expand("%"), 0)<CR>:call CallSpin()<CR><CR>
+map <leader>] <ESC>:call SetSpinCall(expand("%"), line("."))<CR>:call CallSpin()<CR><CR>
+
+function SetSpinCall(filename, linenum)
+  let g:spin_test_file = a:filename
+  let g:spin_test_line = a:linenum
+endfunction
+
+function! CallSpin()
+  if g:spin_test_line 
+    execute "!spin push " . g:spin_test_file . ":" . g:spin_test_line
+  else
+    execute "!spin push " . g:spin_test_file
+  endif
+endfunction
+      
 
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_ 
@@ -145,3 +163,8 @@ onoremap <silent> [l :call NextIndent(0, 0, 0, 1)<CR>
 onoremap <silent> ]l :call NextIndent(0, 1, 0, 1)<CR>
 onoremap <silent> [L :call NextIndent(1, 0, 1, 1)<CR>
 onoremap <silent> ]L :call NextIndent(1, 1, 1, 1)<CR>
+
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
+hi StatusLine   ctermbg=235 guibg=#1a1a1a cterm=bold gui=bold
