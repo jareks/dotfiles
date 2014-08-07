@@ -8,8 +8,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle "ack.vim"
 Bundle 'JSON.vim'
-Bundle 'LustyJuggler'
-Bundle 'The-NERD-tree'
+"Bundle 'LustyJuggler'
+"Bundle 'The-NERD-tree'
 Bundle 'ruby.vim'
 Bundle 'git://github.com/tpope/vim-rails.git'
 Bundle 'git://git.wincent.com/command-t.git'
@@ -42,14 +42,14 @@ set maxmempattern=16384
 
 syntax on
 
-map <silent> <A-1> <ESC>:NERDTreeToggle<CR>
+"map <silent> <A-1> <ESC>:NERDTreeToggle<CR>
 nmap <silent> <C-S> <ESC>:w<CR>
 imap <silent> <C-S> <ESC>:w<CR>
 nmap g* :Ack -w <C-R><C-W><space>
 nmap <C-a> :Ack -w <C-R><C-W><space><CR>
-map <silent> <C-Tab> <ESC>:LustyJugglePrevious<CR>
-map <silent> <F3> <ESC>:LustyJuggler<CR>
-map <silent> <leader>q <ESC>:NERDTreeFind<CR>
+"map <silent> <C-Tab> <ESC>:LustyJugglePrevious<CR>
+"map <silent> <F3> <ESC>:LustyJuggler<CR>
+"map <silent> <leader>q <ESC>:NERDTreeFind<CR>
 
 " calling spin
 map <leader>[ <ESC>:call CallSpin()<CR><CR>
@@ -75,8 +75,6 @@ map <C-K> <C-W>k<C-W>_
 map <C-H> <C-W>h<C-W>_ 
 map <C-L> <C-W>l<C-W>_ 
 map <C-C> <C-W>c 
-map <leader>a <Esc>:A
-map <leader>r <Esc>:R<CR>
 nnoremap <silent><BS> :nohlsearch<CR>
 
 imap <C-Space> <C-n>
@@ -90,9 +88,6 @@ map <Down> :echo "j"<CR>
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
 
 colorscheme railscasts
-
-let g:ConqueTerm_ReadUnfocused = 1
-let g:ConqueTerm_InsertOnEnter = 0
 
 command C !ctags -R
 
@@ -167,4 +162,5 @@ onoremap <silent> ]L :call NextIndent(1, 1, 1, 1)<CR>
 if $COLORTERM == 'gnome-terminal'
   set t_Co=256
 endif
+
 hi StatusLine   ctermbg=235 guibg=#1a1a1a cterm=bold gui=bold
