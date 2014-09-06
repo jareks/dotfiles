@@ -3,6 +3,7 @@
   co=checkout
   cp=cherry-pick
   br=branch
+  cm=commit -m
 [color]
   ui=auto
 

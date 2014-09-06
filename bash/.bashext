@@ -11,6 +11,7 @@ alias spec="time bundle exec rake spec"
 alias be="bundle exec"
 alias gts="git status"
 alias ccdiff="colordiff -u1"
+alias sdo="sudo docker"
 
 # Colors
 txtblk='\e[0;30m' # Black - Regular
