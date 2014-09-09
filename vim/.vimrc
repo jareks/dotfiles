@@ -8,8 +8,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle "ack.vim"
 Bundle 'JSON.vim'
-"Bundle 'LustyJuggler'
-"Bundle 'The-NERD-tree'
 Bundle 'ruby.vim'
 Bundle 'git://github.com/tpope/vim-rails.git'
 Bundle 'git://git.wincent.com/command-t.git'
@@ -17,16 +15,12 @@ Bundle 'git://github.com/bkad/CamelCaseMotion.git'
 Bundle 'git://github.com/kchmck/vim-coffee-script.git'
 Bundle 'git://github.com/uggedal/go-vim.git'
 Bundle 'derekwyatt/vim-scala'
+Bundle 'othree/html5.vim'
 
-" Snipmate https://github.com/garbas/vim-snipmate
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
-Bundle "honza/vim-snippets"
-"Bundle 'git://github.com/astashov/vim-ruby-debugger.git'
-"Bundle 'CamelCaseMotion'
-"Bundle 'CamelCaseComplete'
-"Bundle 'Conque'
+"Bundle "MarcWeber/vim-addon-mw-utils"
+"Bundle "tomtom/tlib_vim"
+"Bundle "garbas/vim-snipmate"
+"Bundle "honza/vim-snippets"
 
 filetype plugin indent on
 set expandtab
