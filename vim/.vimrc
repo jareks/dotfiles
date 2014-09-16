@@ -86,7 +86,7 @@ colorscheme railscasts
 command C !ctags -R
 
 "remove spaces at end of lines
-autocmd FileType c,cpp,java,php,javascript,haskell,ruby autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType c,cpp,java,php,javascript,haskell,ruby,yaml autocmd BufWritePre <buffer> :%s/\s\+$//e
 autocmd BufReadPost *
       \ if line("'\"") > 0 && line("'\"") <= line("$") |
       \    exe "normal g`\"" |
@@ -102,6 +102,10 @@ map <leader>s "ayiw:%s/<C-R>a/
 map <leader>c "+y
 " Paste from system clipboard
 map <leader>v "+p
+
+"CommandT with flush
+map <leader>t :CommandT<CR>
+map <leader>y :CommandTFlush<CR>:CommandT<CR>
 
 " Open command mode by hitting semicolon:
 nnoremap ; :
@@ -189,6 +193,6 @@ function! RenameFile()
         redraw!
     endif
 endfunction
-map <leader>n :call RenameFile()<cr>
+map <leader>r :call RenameFile()<cr>
 
 
