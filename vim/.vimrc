@@ -22,6 +22,9 @@ Bundle 'othree/html5.vim'
 "Bundle "garbas/vim-snipmate"
 "Bundle "honza/vim-snippets"
 
+"Colors
+Bundle 'https://github.com/altercation/vim-colors-solarized.git'
+
 filetype plugin indent on
 set expandtab
 set tabstop=2
