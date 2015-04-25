@@ -6,6 +6,7 @@
   aa=add -A
   c=commit
   cm=commit -m
+  cam=commit -am
 [color]
   ui=auto
 
