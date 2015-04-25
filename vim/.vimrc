@@ -16,6 +16,7 @@ Bundle 'git://github.com/kchmck/vim-coffee-script.git'
 Bundle 'git://github.com/uggedal/go-vim.git'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'othree/html5.vim'
+Bundle 'rust-lang/rust.vim'
 
 "Bundle "MarcWeber/vim-addon-mw-utils"
 "Bundle "tomtom/tlib_vim"
