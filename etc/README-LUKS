@@ -1,6 +1,7 @@
 sudo apt-get install cryptsetup # not only cryptsetup-bin !!
 
-sudo cryptsetup -c aes-cbc-benbi -s 128 luksFormat /dev/mapper/isw_bhjbdaebde_Volume0p7
+sudo cryptsetup -c aes-xts -s 128 luksFormat /dev/mapper/isw_bhjbdaebde_Volume0p7
+# or maybe sudo cryptsetup -c aes-cbc-benbi -s 128 luksFormat /dev/mapper/isw_bhjbdaebde_Volume0p7
 # or maybe  -c aes-cbc-essiv:sha256
 
 sudo cryptsetup luksOpen /dev/mapper/isw_bhjbdaebde_Volume0p7 cryptohome
