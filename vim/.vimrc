@@ -123,6 +123,13 @@ command C !ctags -R
 " au BufNewFile,BufRead *.ejs set filetype=html
 
 " To get this working: yarn add prettier-eslint-cli
+let g:neoformat_javascript_prettiereslint = {
+      \ 'exe': './node_modules/.bin/prettier-eslint',
+      \ 'args': ['--stdin', '--stdin-filepath', '%:p'],
+      \ 'stdin': 1,
+      \ 'replace': 0
+      \ }
+let g:neoformat_enabled_javascript= ['prettiereslint']
 augroup fmt
   autocmd!
   autocmd BufWritePre *.js,*.jsx Neoformat
