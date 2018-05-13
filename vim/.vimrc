@@ -6,7 +6,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle "ack.vim"
+Bundle "mileszs/ack.vim"
 Bundle 'JSON.vim'
 Bundle 'ruby.vim'
 Bundle 'git://github.com/tpope/vim-rails.git'
@@ -17,14 +17,32 @@ Bundle 'fatih/vim-go'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'othree/html5.vim'
 Bundle 'rust-lang/rust.vim'
+Bundle 'sbdchd/neoformat'
+Bundle 'https://github.com/tpope/vim-bundler.git'
+Bundle 'https://github.com/altercation/vim-colors-solarized.git'
 
 "Bundle "MarcWeber/vim-addon-mw-utils"
 "Bundle "tomtom/tlib_vim"
 "Bundle "garbas/vim-snipmate"
 "Bundle "honza/vim-snippets"
 
-"Colors
-Bundle 'https://github.com/altercation/vim-colors-solarized.git'
+"https://medium.com/@hpux/vim-and-eslint-16fa08cc580f
+Plugin 'vim-syntastic/syntastic'
+set statusline=%f
+set statusline+=%m      "modified flag
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+set statusline+=%=      "move to right part
+set statusline+=%l/%L   "line / total lines
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+" dirty hack to convince syntastic that eslint is installed
+let g:syntastic_javascript_eslint_exec = '/bin/ls'
+let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
 
 filetype plugin indent on
 set expandtab
@@ -36,15 +54,19 @@ set nowrap
 set undofile
 set hlsearch
 set maxmempattern=16384
-
+set wildignore=node_modules,tmp,*.un~
+let g:netrw_list_hide='.*\.un\~$'
 
 syntax on
 
 "map <silent> <A-1> <ESC>:NERDTreeToggle<CR>
 nmap <silent> <C-S> <ESC>:w<CR>
 imap <silent> <C-S> <ESC>:w<CR>
+
 nmap g* :Ack -w <C-R><C-W><space>
 nmap <C-a> :Ack -w <C-R><C-W><space><CR>
+" use ag for ack.vim
+let g:ackprg = 'ag --vimgrep'
 "map <silent> <C-Tab> <ESC>:LustyJugglePrevious<CR>
 "map <silent> <F3> <ESC>:LustyJuggler<CR>
 "map <silent> <leader>q <ESC>:NERDTreeFind<CR>
@@ -89,15 +111,22 @@ colorscheme railscasts
 
 command C !ctags -R
 
+" TODO: this doesnt work with Neoformat augroup fmt
 "remove spaces at end of lines
-autocmd FileType c,cpp,java,php,javascript,haskell,ruby,yaml autocmd BufWritePre <buffer> :%s/\s\+$//e
-autocmd BufReadPost *
-      \ if line("'\"") > 0 && line("'\"") <= line("$") |
-      \    exe "normal g`\"" |
-      \  endif
+" autocmd FileType c,cpp,java,php,haskell,ruby,yaml,rust autocmd BufWritePre <buffer> :%s/\s\+$//e
+" autocmd BufReadPost *
+"       \ if line("'\"") > 0 && line("'\"") <= line("$") |
+"       \    exe "normal g`\"" |
+"       \  endif
 
-" syntax higlight for .jst.ejs
-au BufNewFile,BufRead *.ejs set filetype=html
+" " syntax higlight for .jst.ejs
+" au BufNewFile,BufRead *.ejs set filetype=html
+
+" To get this working: yarn add prettier-eslint-cli
+augroup fmt
+  autocmd!
+  autocmd BufWritePre *.js,*.jsx Neoformat
+augroup END
 
 " Replace word under coursor
 map <leader>s "ayiw:%s/<C-R>a/
