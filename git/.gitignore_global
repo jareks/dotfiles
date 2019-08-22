@@ -1,4 +1,6 @@
 *.un~
 *.swp
 tags
+.ackrc
+.ctags
 

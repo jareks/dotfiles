@@ -12,6 +12,13 @@ alias be="bundle exec"
 alias gts="git status"
 alias ccdiff="colordiff -u1"
 alias sdo="sudo docker"
+alias dfh='df -h -x squashfs -x tmpfs -x devtmpfs'
+
+function g {
+  gvim .
+  sleep 0.3
+  wmctrl -r GVIM -b add,maximized_vert,maximized_horz
+}
 
 # Colors
 txtblk='\e[0;30m' # Black - Regular

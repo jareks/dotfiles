@@ -44,6 +44,9 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = '/bin/ls'
 let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
 
+" tell syntastic we want python3
+let g:syntastic_python_python_exec = '/usr/bin/python3'
+
 filetype plugin indent on
 set expandtab
 set tabstop=2
